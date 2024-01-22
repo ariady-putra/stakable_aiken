@@ -1,0 +1,19 @@
+name = "ariady-putra/staking"
+version = "0.0.0"
+license = "Apache-2.0"
+description = "Aiken contracts for project 'ariady-putra/staking'"
+
+[repository]
+user = "ariady-putra"
+project = "staking"
+platform = "github"
+
+[[dependencies]]
+name = "aiken-lang/stdlib"
+version = "1.7.0"
+source = "github"
+
+[[dependencies]]
+name = "aiken-extra/string_util"
+version = "3.170.202312"
+source = "github"

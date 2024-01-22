@@ -1,0 +1,9 @@
+[[packages]]
+name = "aiken-lang/stdlib"
+version = "1.7.0"
+source = "github"
+
+[[packages]]
+name = "aiken-extra/string_util"
+version = "3.170.202312"
+source = "github"

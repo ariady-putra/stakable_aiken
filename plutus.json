@@ -1,0 +1,202 @@
+{
+  "preamble": {
+    "title": "ariady-putra/staking",
+    "description": "Aiken contracts for project 'ariady-putra/staking'",
+    "version": "0.0.0",
+    "plutusVersion": "v2",
+    "compiler": {
+      "name": "Aiken",
+      "version": "v1.0.20-alpha+c96a41d"
+    },
+    "license": "Apache-2.0"
+  },
+  "validators": [
+    {
+      "title": "spending.spend",
+      "datum": {
+        "title": "_datum",
+        "schema": {
+          "$ref": "#/definitions/Void"
+        }
+      },
+      "redeemer": {
+        "title": "_redeemer",
+        "schema": {
+          "$ref": "#/definitions/Void"
+        }
+      },
+      "parameters": [
+        {
+          "title": "owner",
+          "schema": {
+            "$ref": "#/definitions/ByteArray"
+          }
+        }
+      ],
+      "compiledCode": "58b201000032323232323232322322225333007323253330093370e90010008991919198008008011129998088008a5013232533300f3371e00401829444cc010010004c050008dd718090009bac300f301030103010301030103010301030103009001300e300800314a060146ea8004c030c034c018004526153300849011856616c696461746f722072657475726e65642066616c73650013656375c0024600a6ea80055cd2b9c5573aaae7955cfaba157441",
+      "hash": "ab1162450def16f1c6ffb26ffabd0ebd11c99ac752ff2db1a4a59351"
+    },
+    {
+      "title": "staking.stake",
+      "redeemer": {
+        "title": "_redeemer",
+        "schema": {
+          "$ref": "#/definitions/Void"
+        }
+      },
+      "parameters": [
+        {
+          "title": "owner",
+          "schema": {
+            "$ref": "#/definitions/ByteArray"
+          }
+        }
+      ],
+      "compiledCode": "5901d801000032323232323232323223222533300632323253330093370e90030008a8018a99980499b87480100044c8c94cc030c8c8dcc9919199800800801a4500222533301500210011323233300500500153330133370e6e3400d200013730004266e2800ccdc50031b98002301900337326eb8c05c008dcc249003301137526e60c0052210a43726564656e7469616c003301137526e61241023a20003301137526e60c0052210122003301137526e60c8dcc991919980080080124410022253330113371000490000800899191919980300319b8100548008cdc599b80002533301433710004900a0a40c0290570099b8b33700002a66602866e200052014148180520ae010043370c004901019b8300148080cdc700280119b81371a00290011bb30023301137526e60c00522010122004bd7011b99001150053010001300800214a060146ea8004c034c038c0180084c8c8c8cc004004008894ccc03800452809919299980619b8f00200914a226600800800260240046eb8c040004dd61806980718071807180718071807180718071803000980618028008a4c2a6600e92011856616c696461746f722072657475726e65642066616c73650013656375c0024600a6ea80055cd2b9c5573aaae7955cfaba05742ae881",
+      "hash": "f10a8c479fb1bb4cf730b6bdefe27a68a041bce5052eff54f73765c5"
+    },
+    {
+      "title": "week10.staking",
+      "redeemer": {
+        "title": "_",
+        "schema": {
+          "$ref": "#/definitions/Void"
+        }
+      },
+      "parameters": [
+        {
+          "title": "addr",
+          "schema": {
+            "$ref": "#/definitions/aiken~1transaction~1credential~1Address"
+          }
+        }
+      ],
+      "compiledCode": "59027301000032323232323232323232222533300632323253330093370e90030008a51153330093370e900200089919191919299980719b8748000c0340044c8c8c94ccc044cdc480119b82480100045288a9980924811b696e73756666696369656e74207265776172642073686172696e670014a064646660020020049000111299980c00108008999801801980d8011919b8000253330153375e60146026002024264646464a66603266e1d20020011480004dd6980f980b801180b80099299980c19b8748008004530103d87a8000132323300100100222533301f00114c103d87a8000132323232533301f3371e9110000213374a9000198121ba80014bd700998030030019bad3021003375c603e004604600460420026eacc078c058008c058004c8cc004004008894ccc0700045300103d87a8000132323232533301c3371e9110000213374a9000198109ba60014bd700998030030019bab301e003375c60380046040004603c0026eacc03cc04c00452000301a0023758602c602e602e601c0086eb4c054004c03000454cc03d241244578706563746564206f6e20696e636f727265637420436f6e7374722076617269616e74001632323300100100222533301400114c0103d87a800013232323253330143375e014004266e95200033019375000297ae0133006006003375a602c00660280046030004602c0026eacc04cc050c050c050c050c050c050c02c004c004c02801c8c048004c040004c01c0085281803800980098028011180698070008a4c2a6600e92011856616c696461746f722072657475726e65642066616c73650013656230063754002460086ea80055cd2b9c5573aaae7955cfaba05742ae89",
+      "hash": "098ee5d4e6cd8fa04c3e396893cf93d05d7ec89ee7777b6089a5cdf1"
+    }
+  ],
+  "definitions": {
+    "ByteArray": {
+      "dataType": "bytes"
+    },
+    "Int": {
+      "dataType": "integer"
+    },
+    "Option$aiken/transaction/credential/Referenced$aiken/transaction/credential/Credential": {
+      "title": "Optional",
+      "anyOf": [
+        {
+          "title": "Some",
+          "description": "An optional value.",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "$ref": "#/definitions/aiken~1transaction~1credential~1Referenced$aiken~1transaction~1credential~1Credential"
+            }
+          ]
+        },
+        {
+          "title": "None",
+          "description": "Nothing.",
+          "dataType": "constructor",
+          "index": 1,
+          "fields": []
+        }
+      ]
+    },
+    "Void": {
+      "title": "Unit",
+      "description": "The nullary constructor.",
+      "anyOf": [
+        {
+          "dataType": "constructor",
+          "index": 0,
+          "fields": []
+        }
+      ]
+    },
+    "aiken/transaction/credential/Address": {
+      "title": "Address",
+      "description": "A Cardano `Address` typically holding one or two credential references.\n\n Note that legacy bootstrap addresses (a.k.a. 'Byron addresses') are\n completely excluded from Plutus contexts. Thus, from an on-chain\n perspective only exists addresses of type 00, 01, ..., 07 as detailed\n in [CIP-0019 :: Shelley Addresses](https://github.com/cardano-foundation/CIPs/tree/master/CIP-0019/#shelley-addresses).",
+      "anyOf": [
+        {
+          "title": "Address",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "payment_credential",
+              "$ref": "#/definitions/aiken~1transaction~1credential~1Credential"
+            },
+            {
+              "title": "stake_credential",
+              "$ref": "#/definitions/Option$aiken~1transaction~1credential~1Referenced$aiken~1transaction~1credential~1Credential"
+            }
+          ]
+        }
+      ]
+    },
+    "aiken/transaction/credential/Credential": {
+      "title": "Credential",
+      "description": "A general structure for representing an on-chain `Credential`.\n\n Credentials are always one of two kinds: a direct public/private key\n pair, or a script (native or Plutus).",
+      "anyOf": [
+        {
+          "title": "VerificationKeyCredential",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "$ref": "#/definitions/ByteArray"
+            }
+          ]
+        },
+        {
+          "title": "ScriptCredential",
+          "dataType": "constructor",
+          "index": 1,
+          "fields": [
+            {
+              "$ref": "#/definitions/ByteArray"
+            }
+          ]
+        }
+      ]
+    },
+    "aiken/transaction/credential/Referenced$aiken/transaction/credential/Credential": {
+      "title": "Referenced",
+      "description": "Represent a type of object that can be represented either inline (by hash)\n or via a reference (i.e. a pointer to an on-chain location).\n\n This is mainly use for capturing pointers to a stake credential\n registration certificate in the case of so-called pointer addresses.",
+      "anyOf": [
+        {
+          "title": "Inline",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "$ref": "#/definitions/aiken~1transaction~1credential~1Credential"
+            }
+          ]
+        },
+        {
+          "title": "Pointer",
+          "dataType": "constructor",
+          "index": 1,
+          "fields": [
+            {
+              "title": "slot_number",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "transaction_index",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "certificate_index",
+              "$ref": "#/definitions/Int"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
